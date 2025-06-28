@@ -1,0 +1,106 @@
+:root {
+  box-sizing: border-box;
+}
+
+.mainContainer {
+  font-family: var(--font-sans);
+  color: var(--light-slate);
+  padding-left: 10px;
+}
+
+.contents {
+  display: flex;
+  flex-direction: row;
+}
+
+.otherContents {
+  max-width: 55%;
+  padding: 2rem 2rem 2rem 0;
+}
+
+.image {
+  position: relative;
+  display: inline-block;
+  max-width: 30vw;
+  margin: 2rem auto 0;
+}
+
+.imageBorder {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.imageBorder::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--green);
+  border-radius: 5px;
+  z-index: -1;
+  transition: top 0.3s ease, left 0.3s ease;
+}
+
+.imageBorder:hover::before {
+  top: 15px;
+  left: 15px;
+}
+
+.image img {
+  display: block;
+  max-width: 100%;
+  border-radius: 5px;
+  filter: hue-rotate(140deg);
+  transition: filter 0.3s ease;
+}
+
+.image img:hover {
+  filter: none;
+}
+
+.technoList > ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 250px));
+  gap: 0 10px;
+  padding: 0;
+}
+.technoList > ul > li {
+  list-style: none;
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  font-family: var(--font-mono);
+  font-size: var(--fz-xs);
+}
+.technoList > ul > li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--green);
+}
+
+@media only screen and (max-width: 768px) {
+  .mainContainer {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+  }
+  .contents {
+    flex-direction: column;
+  }
+  .otherContents {
+    max-width: 100%;
+    padding: 2rem 0;
+  }
+
+  .technoList > ul {
+    margin: 20px 0;
+  }
+
+  .image {
+    max-width: 40vw;
+  }
+}

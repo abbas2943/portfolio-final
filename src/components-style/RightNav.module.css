@@ -1,0 +1,37 @@
+.rightNavContainer{
+    width: 40px;
+    position: fixed;
+    bottom: 0;
+    left: auto;
+    right: 20px;
+    height: 500px;
+    z-index: 10;
+    text-align: end;
+    writing-mode: vertical-rl;
+}
+
+.text_Layer> a{
+    text-decoration: none;
+    color: var(--light-slate);
+}
+.text_Layer::after {
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 1px;
+    height: 130px;
+    margin-top: 10px;
+    bottom: 0px;
+    background-color: var(--light-slate);
+}
+.text_Layer > a:hover{
+    padding-bottom: 8px;
+    transition-duration: 0.40s;
+    color: var(--green);
+}
+
+@media only screen and (max-width:768px){
+    .rightNavContainer{
+      display: none;
+    }
+  }

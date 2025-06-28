@@ -1,0 +1,162 @@
+@import url("../common-styles.css");
+.main__body {
+  font-family: var(--font-sans);
+  max-width: 80%;
+  margin: 10px auto;
+  padding: 30px;
+}
+.greeting {
+  color: var(--green);
+}
+.my__name {
+  color: var(--lightest-slate);
+  font-size: 460%;
+  font-weight: 700;
+  letter-spacing: 0px;
+  word-spacing: -4px;
+}
+.greeting__portion > p {
+  color: var(--light-slate);
+}
+.my__role {
+  color: var(--slate);
+  font-size: 72px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  word-spacing: -8px;
+}
+
+.my__intro,
+.my__hobby {
+  max-width: 75%;
+}
+
+p > a {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  color: var(--green);
+}
+
+.greeting__portion > p > a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  background-color: var(--green);
+  transform-origin: bottom left;
+  transition: transform 0.25s ease-out;
+}
+p > a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.course__btn {
+  margin-top: 6%;
+  width: 240px;
+  text-decoration: none;
+  color: var(--green);
+  border: 1px solid var(--green);
+  border-radius: 4px;
+}
+
+.course__btn:hover {
+  cursor: pointer;
+  background: var(--green-tint);
+  transition: var(--transition);
+}
+
+.course__btn p {
+  color: var(--green);
+  padding: 15px 20px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.page__body {
+  margin-top: 50px;
+  color: var(--light-slate);
+  counter-reset: section-counter;
+}
+.numbered_heading {
+  display: flex;
+  -webkit-box-align: center;
+  position: relative;
+  margin: 10px 0px 40px;
+  width: 100%;
+  font-size: clamp(26px, 5vw, var(--fz-heading));
+  white-space: nowrap;
+  flex-direction: row;
+  align-items: center;
+}
+section {
+  margin-top: 15%;
+}
+
+section h2::before {
+  counter-increment: section-counter;
+  content: "0" counter(section-counter) ". ";
+  color: var(--green);
+  margin-right: 10px;
+  position: relative;
+  bottom: 4px;
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+section:not(:last-of-type) h2::after {
+  content: "";
+  display: inline-block;
+  width: 30%;
+  height: 1px;
+  color: white;
+  background-color: var(--lightest-navy);
+  position: relative;
+  bottom: 4px;
+  left: 20px;
+}
+
+.page__body > section:nth-child(even) {
+  position: relative;
+  top: 10%;
+}
+
+.page__body > section:last-child {
+  max-width: 75%;
+  margin: auto;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .my__name,
+  .my__role {
+    font-size: 7.3vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main__body {
+    max-width: 90%;
+    margin: auto;
+    padding: 30px 0 30px 0;
+    text-align: justify;
+  }
+  .my__intro,
+  .my__hobby,
+  section {
+    max-width: 100%;
+  }
+ 
+  /* section:nth-child(even) { */
+    /* max-width: 100%; */
+    /* position: static; */
+  /* } */
+}

@@ -1,0 +1,45 @@
+* {
+  font-family: var(--font-mono);
+}
+.contactContainer {
+  color: var(--light-slate);
+  text-align: center;
+  padding-left: 10px;
+}
+.contactContainer > h1 {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 3.5em;
+}
+.contactContainer > h2::before {
+  font-size: large;
+  position: relative;
+  bottom: 0;
+}
+.contactContainer > h2 {
+  color: var(--green);
+  font-size: large;
+  position: relative;
+  bottom: 4px;
+}
+button {
+  background: none;
+  border: 1px solid var(--green);
+  border-radius: 4px;
+  padding: 1.25rem 2.5rem;
+  font-size: small;
+}
+button a {
+  text-decoration: none;
+  color: var(--green);
+}
+button:hover {
+  background: var(--green-tint);
+  transition: var(--transition);
+}
+
+@media only screen and (max-width: 768px) {
+  .contactContainer {
+    max-width: 100%;
+  }
+}

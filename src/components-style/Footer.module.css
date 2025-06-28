@@ -1,0 +1,37 @@
+small{
+    margin: 20px;
+    color: var(--slate);
+    margin: 20px auto 20px auto;
+    padding: 20px;
+}
+a:link{
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.socials{
+    display: none;
+}
+
+@media only screen and (max-width: 768px){
+    .socials{
+        display: block;
+        max-width: 80%;
+        margin: auto;
+        /* border: 1px solid greenyellow; */
+    }
+    .socials>ul{
+        
+        /* border: 1px solid rgb(64, 47, 255); */
+        display: flex;
+        flex-direction: row;
+        padding: 2rem;
+    }
+
+    .socials>ul>li{
+        /* border: 1px solid white; */
+        margin: auto;
+    }
+
+}
