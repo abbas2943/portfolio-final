@@ -17,9 +17,6 @@ function LeftNav() {
         <li>
           <a href='https://www.linkedin.com/in/abbasalikhan29/' target="_blank" rel="noopener noreferrer" ><i loading="lazy" className="fa-brands fa-linkedin-in"></i></a>
         </li>
-        <li>
-          <a href='#'><i loading="lazy" className="fa-brands fa-codepen"></i></a>
-        </li>
         <div className={leftNavCSS.vr}/>
       </ul>
     </div>

@@ -6,7 +6,7 @@ function MyFooter(){
      <div className={FooterCSS.socials}>
       <ul>
         <li>
-          <a href="https://github.com/abbaskhan2943" title="Github" target="_blank" rel="noopner noreferrer"><i loading="lazy" className="fa-brands fa-github"></i></a>
+          <a href="https://github.com/abbas2943" title="Github" target="_blank" rel="noopner noreferrer"><i loading="lazy" className="fa-brands fa-github"></i></a>
         </li>
         <li>
           <a href="https://instagram.com/abace_aley/" title="Instagram" target='_blank' rel="noopner noreferrer"><i loading="lazy" className="fa-brands fa-instagram"></i></a>
@@ -16,9 +16,6 @@ function MyFooter(){
         </li>
         <li>
           <a href='https://www.linkedin.com/in/abbasalikhan29/' title="LinkedIn" target="_blank" rel="noopener noreferrer"><i loading="lazy" className="fa-brands fa-linkedin-in"></i></a>
-        </li>
-        <li>
-          <a href='#'><i loading="lazy" className="fa-brands fa-codepen"></i></a>
         </li>
         <div className={FooterCSS.vr}/>
       </ul>
